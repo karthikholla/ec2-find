@@ -138,7 +138,7 @@ state_color() {
 }
 
 function get_format_string() {
-  printf "%s" "%-8s %-11s %-20s %-10s %-15s %-14s %-16s %-$(tag_width Name)s"
+  printf "%s" "%-8s %-11s %-20s %-10s %-15s %-14s %-32s %-$(tag_width Name)s"
   for ((i=1; i<=tag_count; i++)); do
     [[ "${tag_names[i]}" != "Name" ]] && printf "%s" "  %-${tag_widths[i]}s"
   done
